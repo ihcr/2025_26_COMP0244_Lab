@@ -332,7 +332,9 @@ git clone --recursive git@github.com:COMP0244-S25/comp0244-go2.git
 
 </details>
 
-## Attaching to a Running Docker Container in VS Code
+<details>
+<summary><h2>Attaching to a Running Docker Container in VS Code</h2></summary>
+
 This would allow access to file explorer. 
 
 ### Prerequisites
@@ -372,12 +374,16 @@ You can also use the Command Palette:
 - Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
 - Type and select `Docker: Attach Shell` or `Remote-Containers: Attach to Running Container`.
 
+</details>
+
 ---
 
 # Lab 1: Robot Teleop & Simulation Basics
 **Goal:** In this lab, student groups will alternate between operating the real unitree robot and completing exercises in the simulation. This rotation ensures that everyone gets hands-on experience safely while working on core robotic tasks.
 
-## Real Robot Station (Alternating by groups)
+<details>
+<summary><h2>Real Robot Station (Alternating by groups)</h2></summary>
+
 **Safety First!**
 1. Read carefully the instructions shared in moodle named: OPS-G07-SOP-Go2
 2. Make sure you understand how to insert a battery and how to turn the robot on/off.
@@ -544,8 +550,11 @@ source unitree_ros2/setup.sh
 python3 extract_data_real_robot.py
 ```
 
+</details>
 
-## Simulation Station (Parallel)
+<details>
+<summary><h2>Simulation Station (Parallel)</h2></summary>
+
 If your group does not currently have access to the real robot, please work on the following tasks in the simulation. First, pull the latest code and compile.
 
 ### Pull recursively all repos and enter the docker to re-compile
@@ -681,13 +690,17 @@ ros2 run edge_follower edge_follower
 1. Make the robot work more smoothly based on the lines to follow the cylinder.
 2. Move the robot to {x: 0.0, y: 1.0, theta: 3.14} and make it see and turn into the corners and keep following the wall cw.
 
+</details>
+
 ---
 
 # Lab 2: Autonomous Deployment Challenge
 
 **Aim:** Test the autonomous path-following code in Simulation, and compete among student groups to see who can trace complex shapes on the Real Robot most efficiently and safely!
 
-## I. Simulation Preview
+<details>
+<summary><h2>I. Simulation Preview</h2></summary>
+
 First, familiarize yourself with how the `path_follower` works in a simulation environment. The simulation acts as our sandbox.
 
 ###### 1. Start the simulation
@@ -717,7 +730,11 @@ Once the robot finishes its path, you can see output in the terminal:
 
 <img src="media/path_follower.png" alt="path_follower" width="50%">
 
-## II. Real Robot Deployment Challenge
+</details>
+
+<details>
+<summary><h2>II. Real Robot Deployment Challenge</h2></summary>
+
 This section will test out the waypoint following with the **Real-World Unitree Go2** Robot.
 Teams will try to deploy predefined trajectories like an 'eight-shape', and can further extend it.
 
@@ -749,8 +766,13 @@ Using what you have learned from the `publish_eight_shape` or `publish_ellipse_s
 - Write a publisher that generates waypoints mimicking a **"Z-shape"**. Run this on the real robot.
 - Write a publisher that generates waypoints mimicking a **"Number Shape"** (e.g. your group ID). Run this on the real robot and see how accurate the real trajectory is!
 
+</details>
+
 ---
-# BSD 3-Clause License
+
+<details>
+<summary><h1>BSD 3-Clause License</h1></summary>
+
 
 Copyright (c) 2016-2025 Dimitrios Kanoulas
 All rights reserved.
@@ -779,3 +801,4 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</details>
