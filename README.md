@@ -662,7 +662,7 @@ To visualize the local map, open the rviz2 window opened by Gazebo and do the fo
 ### Task B: Wall Following
 **Goal:** Move the Robot via waypoints and wall localization to follow the walls of a convex obstacle.
 
-###### Terminal 1: Launch Gazebo, SLAM, Waypoint Follower
+###### Terminal 1: Launch Gazebo, SLAM, Waypoint Follower (With Obstacle Environment)
 ```bash
 xhost +
 sudo docker exec -it comp0244_unitree /bin/bash
