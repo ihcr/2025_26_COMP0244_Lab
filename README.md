@@ -26,7 +26,9 @@ Then, add the SSH key to your GitHub account (New SSH key):
 cat ~/.ssh/id_rsa.pub
 ```
 
-## Installation on Ubuntu
+<details>
+<summary><h2>Installation on Ubuntu</h2></summary>
+
 ##### Step 1: Open a terminal and clone the repo:
 ```bash
 mkdir /home/$USER/comp0244_ws
@@ -80,7 +82,11 @@ sudo docker container start comp0244_unitree
 sudo docker exec -it comp0244_unitree /bin/bash
 ```
 
-## Installation on Windows
+</details>
+
+<details>
+<summary><h2>Installation on Windows</h2></summary>
+
 ##### Step 1: Open a terminal (wsl) and clone the repo:
 ```bash
 mkdir /home/$USER/comp0244_ws
@@ -157,7 +163,11 @@ sudo docker container start comp0244_unitree
 sudo docker exec -it comp0244_unitree /bin/bash
 ```
 
-## Installation on AppleSilicon
+</details>
+
+<details>
+<summary><h2>Installation on AppleSilicon</h2></summary>
+
 
 This repository provides an environment that can be run within an virtual environemnt of ARM architecture. The environment is designed to run specific software or tasks, and the following instructions will guide you through installing dependencies, setting up the Docker container, and running the necessary files.
 
@@ -319,6 +329,8 @@ git clone --recursive git@github.com:COMP0244-S25/comp0244-go2.git
    ```bash
    source install/setup.bash
    ```
+
+</details>
 
 ## Attaching to a Running Docker Container in VS Code
 This would allow access to file explorer. 
