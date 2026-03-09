@@ -560,7 +560,17 @@ sudo docker exec -it comp0244_unitree /bin/bash
 
 ```bash
 source /opt/ros/humble/setup.bash
-sudo apt-get install ros-humble-rviz2 ros-humble-turtle-tf2-py ros-humble-tf2-ros ros-humble-tf2-tools
+
+# 1. Fix the expired ROS 2 GPG key to avoid 404 Not Found errors during apt install
+sudo rm -f /etc/apt/sources.list.d/ros2*.list
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt-get update
+
+# 2. Install RViz tools AND missing DDS dependencies required for unitree_go
+sudo apt-get install ros-humble-rviz2 ros-humble-turtle-tf2-py ros-humble-tf2-ros ros-humble-tf2-tools ros-humble-rosidl-generator-dds-idl ros-humble-rmw-cyclonedds-cpp -y
+
+# 3. Build the workspace
 cd /usr/app/comp0244_ws
 cd comp0244-go2/src/livox_ros_driver2 && ./build.sh humble
 cd /usr/app/comp0244_ws/comp0244-go2
