@@ -603,12 +603,12 @@ source install/setup.bash
 **Goal:** We will first understand how to move the robot to a waypoint (x,y,θ). We will check how to use the lidar data to fit lines to the point cloud of a wall.
 
 #### Waypoint Follower
-###### Terminal 1: Launch Gazebo and RViz
+###### Terminal 1: Launch Gazebo and RViz (With Obstacle Environment)
 ```bash
 xhost +
 sudo docker exec -it comp0244_unitree /bin/bash
 source /usr/app/comp0244_ws/comp0244-go2/install/setup.bash
-ros2 launch go2_config gazebo_mid360.launch.py
+ros2 launch go2_config gazebo_mid360.launch.py world:=/usr/app/comp0244_ws/comp0244-go2/install/go2_config/share/go2_config/worlds/simple_environment.world
 ```
 ###### Terminal 2: Launch FAST-LIO SLAM
 ```bash
@@ -668,7 +668,7 @@ xhost +
 sudo docker exec -it comp0244_unitree /bin/bash
 source /usr/app/comp0244_ws/comp0244-go2/install/setup.bash
 cd /usr/app/comp0244_ws/comp0244-go2/scripts
-ros2 launch robot_launch.launch.py
+ros2 launch robot_launch.launch.py world:=/usr/app/comp0244_ws/comp0244-go2/install/go2_config/share/go2_config/worlds/simple_environment.world
 ```
 
 ###### Terminal 2: Publish a waypoint {x, y, theta} (w.r.t the odom frame)
